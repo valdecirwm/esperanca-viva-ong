@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ONG Esperança Viva - Transformando vidas através do voluntariado, educação e suporte comunitário.">
+    <title>ONG Esperança Viva</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animate.css for scroll animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" tabindex="0">
+
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-hands-holding-child text-success fs-2"></i>
+                Esperança Viva
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projetos.html">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cadastro.html">Seja Voluntário</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="projetos" class="section-container">
+        <section class="bg-light active-section py-5">
+            <div class="container text-center">
+                <h1 class="display-4 fw-bold">Nossos Projetos Sociais</h1>
+                <p class="lead w-75 mx-auto">Conheça as ações que desenvolvemos para gerar autonomia, inclusão e qualidade de vida na comunidade.</p>
+            </div>
+        </section>
+
+        <section id="frentes-atuacao" class="active-section">
+            <div class="container">
+                <h2 class="section-title">Frentes de Atuação</h2>
+                <div class="row g-4">
+                    <!-- Project 1 -->
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="project-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Educação">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h4">Educação para o Futuro</h3>
+                                <p class="card-text flex-grow-1">Oferecemos reforço escolar, oficinas digitais e aulas de apoio para crianças e jovens do ensino público.</p>
+                                <a href="#cadastro" class="btn btn-outline-success mt-3" onclick="showSection('cadastro', event)">Quero Ajudar neste Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="col-md-6">
+                        <div class="card project-card">
+                            <div class="project-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1593113646773-028c64a8f1b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Alimentos">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h4">Comunidade Sem Fome</h3>
+                                <p class="card-text flex-grow-1">Arrecadação e distribuição mensal de cestas básicas e itens essenciais para famílias em situação de extrema vulnerabilidade.</p>
+                                <a href="#doacoes" class="btn btn-outline-success mt-3" onclick="document.getElementById('doacoes-section').scrollIntoView({behavior:'smooth'})">Fazer Doação</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="doacoes-section" class="bg-light active-section">
+            <div class="container">
+                <h2 class="section-title">Campanhas de Doação</h2>
+                <p class="text-center mb-5">Sua contribuição financeira é revertida integralmente na compra de materiais pedagógicos e mantimentos.</p>
+                
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-5">
+                        <div class="donation-box">
+                            <i class="fa-brands fa-pix fs-1 text-success mb-3"></i>
+                            <h3>Doação via PIX</h3>
+                            <p class="mb-0">Chave CNPJ:</p>
+                            <h4 class="fw-bold">00.123.456/0001-89</h4>
+                            <button class="btn btn-sm btn-secondary mt-2" onclick="copyToClipboard('00.123.456/0001-89')">
+                                <i class="fa-regular fa-copy"></i> Copiar Chave
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="donation-box">
+                            <i class="fa-solid fa-building-columns fs-1 text-success mb-3"></i>
+                            <h3>Transferência Bancária</h3>
+                            <p class="mb-1">Banco Solidário (001)</p>
+                            <p class="mb-0 fw-bold">Agência: 1234-5 | C/C: 98765-4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="text-success"><i class="fa-solid fa-hands-holding-child me-2"></i>Esperança Viva</h5>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0 footer-links">
+                    <a href="#" onclick="showSection('inicio', event)" class="me-3">Início</a>
+                    <a href="#" onclick="showSection('projetos', event)" class="me-3">Projetos</a>
+                    <a href="#" onclick="showSection('cadastro', event)">Voluntariado</a>
+                </div>
+                <div class="col-md-4">
+                    <div class="fs-4">
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3 border-secondary">
+            <p class="small text-muted mb-0">© 2026 ONG Esperança Viva. Todos os direitos reservados. CNPJ: 00.123.456/0001-89</p>
+        </div>
+    </footer>
+
+     <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--JS MAIN-->
+    <script src="/js/main.js"></script>
+    
+</body>
+
+</html>
